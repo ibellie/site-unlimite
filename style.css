@@ -1,0 +1,405 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face{
+    font-family: "Porky";
+    src: url("./assets/fonts/PORKYS_.TTF");
+    font-style: normal;
+}
+
+@font-face{
+    font-family: "Creato";
+    src: url("./assets/fonts/CreatoDisplay-Regular.otf");
+    font-style: normal;
+}
+
+body{
+    font-family: "Creato";
+    font-weight: 500;
+}
+
+nav{
+    background-color: #f17baf;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    top: 0;
+    width: 100%;
+    position: fixed;
+
+    border-radius: 0px  0px 25px 25px;
+    box-shadow: 0px  0px 10px #bb324dba;
+
+    padding: 1rem;
+}
+
+h1{
+    color: #ffffff;
+    font-family: "Porky";
+    font-size: 35px;
+
+    transition: all 0.3s ease-in-out;
+}
+
+h1:hover{
+    transform: scale(1.2);
+}
+
+ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 2.5rem;
+}
+
+ul a{
+    display: inline-block;
+    color: #ffffff;
+    font-family: "Creato";
+    font-weight: 600;
+    font-size: 15px;
+    text-decoration: none;
+
+    transition: all 0.3s ease-in-out;
+}
+
+ul a:hover{
+    color: #bb324e;
+    transform: translateY(-5px);
+}
+
+a{
+    color: #ffffff;
+    font-family: "Creato";
+    font-weight: 600;
+    font-size: 15px;
+    text-decoration: none;
+
+    transition: all 0.3s ease-in-out;
+}
+
+a:hover{
+    color: #bb324e;
+}
+
+.saida{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.sair{
+    width: 25px;
+}
+
+.hero{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    max-width: 100%;
+    margin-top: 10rem;
+    margin-bottom: 5rem;
+    padding: 0rem 4rem;
+    gap: 2rem;
+}
+
+.container1 h2 {
+    font-size: 80px;
+    font-weight: 900;
+    line-height: 1.1;
+    color: #88c1e7;
+    text-transform: uppercase;
+}
+
+.container1 h2 span.outlined {
+    color: transparent;
+    -webkit-text-stroke: 0.5px #88c1e7;
+}
+
+.title-bolotas {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.circles {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.circle {
+    width: 60px;
+    height: 60px;
+    border: 4px solid #ffffff;
+    border-radius: 50%;
+    margin-top: 10px;
+    position: relative;
+}
+
+.c1 { background-color: #f17baf; }
+.c2 { background-color: #ad94db; }
+.c3 { background-color: #becc76; }
+
+.circle:not(:first-child) {
+    margin-left: -18px;
+    z-index: 1;
+}
+
+.circle:nth-child(2) { z-index: 2; }
+.circle:nth-child(3) { z-index: 3; }
+
+.info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.img-container{
+    width: 500px;
+    border-radius: 30px;
+}
+
+.card-hero {
+    position: relative;
+    width: 400px;
+    background: #b695bc; /* escolha um roxo/lilás */
+    border-radius: 20px;
+    padding: 2rem;
+    overflow: hidden;
+}
+
+/* “corte” no canto superior direito */
+.card-hero .corner {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80px;
+    height: 40px;
+    background: #ad94db;
+    border-bottom-left-radius: 20px;
+}
+
+/* bolinhas no canto superior */
+.card-hero .dots::before,
+.card-hero .dots::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #fff;
+}
+.card-hero .dots::after {
+    right: 30px;
+}
+
+/* texto superior esquerdo */
+.card-text {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #000;
+    line-height: 1.4;
+}
+
+/* imagem central */
+.card-hero img {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 2rem;
+}
+
+/* botão inferior */
+.card-btn {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    background: transparent;
+    border: 1px solid #ffffff;
+    border-radius: 30px;
+    padding: 0.8rem 1.2rem;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: left;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-btn span {
+    background: #000;
+    color: #fff;
+    border-radius: 50%;
+    padding: 0.5rem 0.5rem;
+}
+
+.contents{
+    background-color: #be5985;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem;
+    gap: 2rem;
+}
+
+.img-play{
+    width: 40px;
+}
+
+.redondos {
+    display: flex;
+    flex-direction: column; 
+    gap: 0.8rem;
+}
+
+.redondos h3{
+    color: #ffffff;
+    border: solid #ffffff 1px;
+    border-radius: 20px;
+    padding: 0.8rem 1rem;
+    width: fit-content; 
+
+    transition: all 0.2s ease-in-out;
+}
+
+.redondos h3:hover {
+    background-color: #ffffff20;
+    transform: scale(1.05);
+}
+
+.info-musica{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.musica{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.musica h3{
+    color: #ffffff;
+}
+
+.pasta-musica{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.folder {
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+
+    background: #ad94db;
+    width: 210px;
+    height: 160px;
+    border-radius: 10px 10px 10px 10px;
+    
+    position: relative;
+    padding: 20px;
+}
+
+
+.folder::before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: 115px;
+    width: 95px;
+    height: 25px;
+    background: #ad94db;
+    border-radius: 10px 10px 0px 0px;
+    z-index: 2;
+}
+
+.folder2 {
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+
+    background: #88c1e7;
+    width: 210px;
+    height: 160px;
+    border-radius: 10px 10px 10px 10px;
+    
+    position: relative;
+    padding: 20px;
+}
+
+
+.folder2::before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: 115px;
+    width: 95px;
+    height: 25px;
+    background: #88c1e7;
+    border-radius: 10px 10px 0px 0px;
+    z-index: 2;
+}
+
+.folder3 {
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+
+    background: #becc76;
+    width: 210px;
+    height: 160px;
+    border-radius: 10px 10px 10px 10px;
+    
+    position: relative;
+    padding: 20px;
+}
+
+
+.folder3::before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: 115px;
+    width: 95px;
+    height: 25px;
+    background: #becc76;
+    border-radius: 10px 10px 0px 0px;
+    z-index: 2;
+}
+
+    .icon {
+      position: absolute;
+      bottom: 25px;
+      left: 25px;
+      width: 60px;
+      height: 50px;
+    }
